@@ -23,7 +23,7 @@ def test_register_page(driver):
     driver.find_element(By.XPATH, "//input[@placeholder='Last Name']").send_keys("Vasan")
 
     # Select Gender
-    driver.find_element(By.XPATH, "//input[@value='Male']").click()
+    driver.find_element(By.XPATH, "//input[@value='Male']").send()
 
     # Select Hobbies
     checkboxes = driver.find_elements(By.XPATH, "//input[@type='checkbox']")
