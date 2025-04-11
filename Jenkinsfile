@@ -10,7 +10,7 @@ pipeline {
 
         stage('Run Tests') {
             steps {
-                bat '"C:\\Users\\HP ADMIN\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m pytest a.py --html=report.html'
+                bat '"C:\\Users\\HP ADMIN\\AppData\\Local\\Programs\\Python\\Python310\\python.exe" -m pytest tests/test_login.py --html=report.html'
             }
         }
 
