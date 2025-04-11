@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git 'https://github.com/yourname/web-automation-tests.git'
+                git 'https://github.com/Seenu8/selenium-pytest-jenkins.git'
             }
         }
 
