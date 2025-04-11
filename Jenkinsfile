@@ -22,15 +22,15 @@ pipeline {
     }
 
     post {
-    failure {
-        emailext(
-            subject: "Jenkins Job Failed: ${env.JOB_NAME}",
-            body: """<p>Job ${env.JOB_NAME} failed at stage.</p>
-                     <p>See report at: ${env.BUILD_URL}report.html</p>""",
-            recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-            to: "mseenu7871@gmail.com"
-        )
+        failure {
+            emailext(
+                subject: "❌ Jenkins Job Failed: ${env.JOB_NAME}",
+                body: """<p>Hi Seenu,</p>
+                         <p>The Jenkins job <b>${env.JOB_NAME}</b> has failed.</p>
+                         <p><a href="${env.BUILD_URL}">Click here to view the build</a></p>
+                         <p><a href="${env.BUILD_URL}report.html">View Test Report</a></p>""",
+                to: "mseenu7871@gmail.com"
+            )
+        }
     }
-}
-
 }
